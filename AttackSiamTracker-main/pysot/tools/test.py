@@ -16,13 +16,6 @@ import numpy as np
 from scipy import ndimage
 from attack_utils import adv_attack_search
 from data_utils import tensor2img, GOT10k_dataset, img2tensor
-# from pysot.mypysot.models.model_builder_apn import ModelBuilderAPN
-# from pysot.mypysot.tracker.siamapn_tracker import SiamAPNTracker
-# from pysot.mypysot.utils.bbox import get_axis_aligned_bbox
-# from pysot.mypysot.utils.model_load import load_pretrain
-# from pysot.toolkit.datasets import DatasetFactory
-# from pysot.mypysot.core.config_apn import cfg
-# from pysot.toolkit.utils.statistics import overlap_ratio
 from mypysot.models.model_builder_apn import ModelBuilderAPN
 from mypysot.tracker.siamapn_tracker import SiamAPNTracker
 from mypysot.utils.bbox import get_axis_aligned_bbox
@@ -36,10 +29,6 @@ from data_utils import normalize
 parser = argparse.ArgumentParser(description='siamapn tracking')
 parser.add_argument('--dataset', default='V4RFlight112', type=str,
                     help='datasets')
-# parser.add_argument('--dataset', default='UAV123_10fps', type=str,
-#                   help='datasets')
-# parser.add_argument('--dataset', default='UAVDT', type=str,
-#                      help='datasets')
 
 parser.add_argument('--snapshot', default='../experiments/SiamAPN/model.pth',
                     type=str,
@@ -67,7 +56,6 @@ parser.add_argument('--img_save', action="store_true",
 args = parser.parse_args()
 
 from Model_config_test import *
-from Model_config_test_R import *
 
 model_name = opt.model
 torch.backends.cudnn.benchmark = True
