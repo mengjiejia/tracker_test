@@ -1,0 +1,12 @@
+Activating conda environment
+The environment variables are:
+/home/mjia1/.conda/envs/attack_tracker/bin/jupyter
+========================================
+/home/mjia1/.conda/envs/attack_tracker/bin:/usr/ebuild/software/Anaconda3/2020.07/condabin:/cm/local/apps/gcc/10.2.0/bin:/usr/ebuild/software/Anaconda3/2020.07:/usr/ebuild/software/Anaconda3/2020.07/sbin:/usr/ebuild/software/Anaconda3/2020.07/bin:/cm/shared/apps/slurm/current/sbin:/cm/shared/apps/slurm/current/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:.:/home/mjia1/.local/bin:/home/mjia1/bin
+
+Command to create ssh tunnel below. Run this on your local machine.
+ssh -N -f -L 24098:g12:24098 mjia1@ada.rs.umbc.edu
+
+Then go to the .err file associated with this SLURM job and copy the
+line starting with "http://127.0.0.1" into your browser.
+
